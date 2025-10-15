@@ -1,6 +1,7 @@
 # config.py
-from os import environ
+import os
 
-BOT_TOKEN = environ.get("BOT_TOKEN", "")
-API_ID = int(environ.get("API_ID", ""))
-API_HASH = environ.get("API_HASH", "")
+class Config:
+    API_ID = int(os.getenv("API_ID", ""))
+    API_HASH = os.getenv("API_HASH", "")
+    BOT_TOKEN = os.getenv("BOT_TOKEN", "")
